@@ -1,7 +1,7 @@
 var app = angular.module("angular-example-app", []);
 
 app.controller("recordatorio-controller", function($scope) {
-    $scope.saludo = "Recordatorios taller de AngularJS";
+    $scope.titulo = "Recordatorios taller de AngularJS";
     
    $scope.recordatorios = [
        {"dia": 16, "mensaje": "trivia, en Argentina se come ensalada rusa, la ensalada de papa,huevo,zanahoria arveja.....será ensalada Argentina en moscu?"},
