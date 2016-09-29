@@ -1,8 +1,28 @@
-<html>
+<html ng-app="angular-example-app">
     <head>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="controller/app.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     </head>
     <body>
-        <div>
+        <div class="container" ng-controller="recordatorio-controller">
+            <h1>{{saludo}}</h1>
+            
+            <table class="table table-striped">
+                <thead>
+                    <th>D&iacute;a</th>
+                    <th>Mensaje</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="recordatorio in recordatorios">
+                        <td>{{recordatorio.dia}}</td>
+                        <td>{{recordatorio.mensaje}}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </body>
 </html>
